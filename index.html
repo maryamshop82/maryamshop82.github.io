@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maryam Shop — Ayollar kiyim do'koni</title>
+<meta name="description" content="Maryam Shop — brend ayollar kiyimlari. Optom va dona savdo. Hazorasp, Toza bozor, 82-do'kon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6efe6;
+    --card:#fffaf4;
+    --ink:#3a2a20;
+    --muted:#8a7464;
+    --line:#e8dccd;
+    --gold:#c9a24a;
+    --gold-soft:#f3e6c4;
+    --brown:#5b3f2e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%}
+  body{
+    font-family:'Manrope',system-ui,sans-serif;
+    background:
+      radial-gradient(1200px 500px at 50% -200px,#efe0c9 0%,transparent 70%),
+      var(--bg);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    display:flex;justify-content:center;
+    padding:40px 18px 32px;
+  }
+  .wrap{width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center}
+
+  .logo{
+    width:112px;height:112px;border-radius:50%;
+    background:linear-gradient(145deg,#f7d774,#c9a24a 60%,#a9822f);
+    padding:4px;box-shadow:0 10px 30px rgba(91,63,46,.18);
+  }
+  .logo img{width:100%;height:100%;border-radius:50%;display:block;background:#fffdf8}
+  .logo-in{
+    width:100%;height:100%;border-radius:50%;
+    background:#fffdf8;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;line-height:.9;
+    border:1px solid rgba(201,162,74,.4);
+  }
+  .logo-in .m{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:30px;color:var(--brown)}
+  .logo-in .s{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--gold);margin-top:2px}
+
+  h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:36px;margin-top:18px;letter-spacing:.3px}
+  .sub{color:var(--muted);font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-top:4px;font-weight:600}
+
+  .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+  .tag{font-size:13px;background:var(--card);border:1px solid var(--line);padding:6px 12px;border-radius:999px;color:var(--brown);font-weight:500}
+
+  .status{
+    margin-top:16px;display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;
+    background:#e7f3e8;color:#2f6b3a;
+  }
+  .status.closed{background:#f6e3e0;color:#9a3b2e}
+  .dot{width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px rgba(47,107,58,.15)}
+  .status.closed .dot{box-shadow:0 0 0 4px rgba(154,59,46,.15)}
+
+  .links{width:100%;display:flex;flex-direction:column;gap:12px;margin-top:26px}
+  .btn{
+    display:flex;align-items:center;gap:14px;width:100%;
+    background:var(--card);border:1px solid var(--line);
+    padding:14px 16px;border-radius:16px;text-decoration:none;color:var(--ink);
+    box-shadow:0 2px 0 rgba(91,63,46,.04);
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(91,63,46,.10);border-color:#dcc9b0}
+  .btn:active{transform:scale(.98)}
+  .ic{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .ic svg{width:22px;height:22px}
+  .txt{flex:1;min-width:0}
+  .txt b{display:block;font-size:15px;font-weight:700}
+  .txt span{display:block;font-size:13px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .arr{color:#c4b29d;font-size:20px}
+
+  .btn.main{background:var(--brown);border-color:var(--brown);color:#fff}
+  .btn.main .txt span{color:#e6d6c4}
+  .btn.main .arr{color:#e6d6c4}
+
+  .tg{background:#e3f2fb;color:#2a9fd8}
+  .main .tg{background:rgba(255,255,255,.14);color:#fff}
+  .ig{background:linear-gradient(135deg,#fde3c8,#f9cbe0);color:#c13584}
+  .ph{background:#e7f3e8;color:#2f6b3a}
+  .mp{background:var(--gold-soft);color:#9a7424}
+
+  .info{
+    width:100%;margin-top:22px;background:var(--card);border:1px solid var(--line);
+    border-radius:18px;padding:6px 18px;
+  }
+  .row{display:flex;gap:12px;padding:14px 0;align-items:flex-start}
+  .row+.row{border-top:1px dashed var(--line)}
+  .row .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.4px;font-weight:600}
+  .row .v{font-size:15px;font-weight:600;margin-top:3px}
+  .row .em{font-size:20px;line-height:1.2}
+
+  footer{margin-top:28px;font-size:12px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <div class="logo"><img src="data:image/webp;base64,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" alt="Maryam Shop logotipi"></div>
+
+  <h1>Maryam Shop</h1>
+  <div class="sub">Ayollar kiyim do'koni</div>
+
+  <div class="tags">
+    <span class="tag">👗 Brend kiyimlar</span>
+    <span class="tag">📦 Optom va dona</span>
+    <span class="tag">🛍️ Barcha mahsulotlar bor</span>
+    <span class="tag">🚚 Yetkazib berish bor</span>
+    <span class="tag">📅 Dam olishsiz</span>
+  </div>
+
+  <div id="status" class="status"><span class="dot"></span><span id="status-text">Ish vaqti 09:00–18:00</span></div>
+
+  <nav class="links">
+    <a class="btn main" href="https://t.me/+mNSme7WQ88lhYTcy" target="_blank" rel="noopener">
+      <span class="ic tg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.5c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.2l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.9c.9-.3 1.7.2 1.4 1.4z"/></svg></span>
+      <span class="txt"><b>Telegram kanalimiz</b><span>Yangi kolleksiyalar va narxlar</span></span>
+      <span class="arr">›</span>
+    </a>
+
+    <a class="btn" href="https://t.me/waga_1717" target="_blank" rel="noopener">
+      <span class="ic tg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3 18.7 19.5c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.2l-4.8-1.5c-1-.3-1.1-1 .2-1.5L20.5 2.9c.9-.3 1.7.2 1.4 1.4z"/></svg></span>
+      <span class="txt"><b>Telegramda yozish</b><span>@waga_1717 · buyurtma va savollar</span></span>
+      <span class="arr">›</span>
+    </a>
+
+    <a class="btn" href="tel:+998975119900">
+      <span class="ic ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+      <span class="txt"><b>Qo'ng'iroq qilish</b><span>+998 97 511 99 00</span></span>
+      <span class="arr">›</span>
+    </a>
+
+    <a class="btn" href="https://www.instagram.com/maryam_shop82/" target="_blank" rel="noopener">
+      <span class="ic ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></span>
+      <span class="txt"><b>Mahsulotlarni ko'rish</b><span>Instagram · @maryam_shop82</span></span>
+      <span class="arr">›</span>
+    </a>
+
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Toza+bozor+Hazorasp" target="_blank" rel="noopener">
+      <span class="ic mp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+      <span class="txt"><b>Do'konga yo'l</b><span>Hazorasp, Toza bozor, 82-do'kon</span></span>
+      <span class="arr">›</span>
+    </a>
+  </nav>
+
+  <section class="info">
+    <div class="row"><span class="em">🕘</span><div><div class="k">Ish vaqti</div><div class="v">Har kuni 09:00 – 18:00 · dam olishsiz</div></div></div>
+    <div class="row"><span class="em">🚚</span><div><div class="k">Yetkazib berish</div><div class="v">Hazorasp ichida — bepul<br><span style="font-weight:500;color:var(--muted);font-size:14px">Boshqa hududlarga — yetkazish narxini mijoz to'laydi</span></div></div></div>
+    <div class="row"><span class="em">📍</span><div><div class="k">Manzil</div><div class="v">Hazorasp, Toza bozor, 82-do'kon</div></div></div>
+    <div class="row"><span class="em">📲</span><div><div class="k">Telefon (Telegram)</div><div class="v">+998 97 511 99 00</div></div></div>
+  </section>
+
+  <footer>© Maryam Shop · Ayollar kiyim do'koni</footer>
+</main>
+
+<script>
+  // Toshkent vaqti bo'yicha "ochiq / yopiq" holatini ko'rsatadi
+  (function(){
+    try{
+      var parts = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Tashkent',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+      var h = +parts.find(function(p){return p.type==='hour'}).value;
+      var m = +parts.find(function(p){return p.type==='minute'}).value;
+      var mins = h*60+m, open = mins>=9*60 && mins<18*60;
+      var el = document.getElementById('status'), t = document.getElementById('status-text');
+      if(open){ t.textContent = 'Hozir ochiq · 18:00 gacha'; }
+      else { el.classList.add('closed'); t.textContent = 'Hozir yopiq · 09:00 da ochiladi'; }
+    }catch(e){}
+  })();
+</script>
+</body>
+</html>
